@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { QuestionProccessComponent } from './question-proccess/question-proccess.component';
 import { TriviaComponent } from './trivia/trivia.component';
 import { TriviaApiService } from './trivia-api.service'
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    QuestionProccessComponent,
     TriviaComponent
   ],
   imports: [
