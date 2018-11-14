@@ -12,7 +12,7 @@ export class TriviaComponent implements OnInit {
 
 	questions = []
 	answers = []
-	questionDetails = {}
+	questionText = ""
 	questionNumber = 0
 	answerChecked = false
 	correctAnswerIndex = -1
@@ -31,6 +31,7 @@ export class TriviaComponent implements OnInit {
 	buildQuestions(currQuestion){
 		let index = Math.floor(Math.random() * 3)  
 		//new instance
+		this.questionText = currQuestion.question
 		this.answers = currQuestion.incorrect_answers.slice()
 		this.answers.splice(index, 0, currQuestion.correct_answer)
 		this.correctAnswerIndex = index
@@ -47,13 +48,14 @@ export class TriviaComponent implements OnInit {
 		}
 	}
 	nextQuestion(){
+		let questionDetails = {}
 		this.questionNumber++
 		if (this.questionNumber > this.questions.length) {
 			alert('This was the last question')
 		}else{
 			this.initVariables()
-	        this.questionDetails = this.questions[this.questionNumber-1]
-	        this.buildQuestions(this.questionDetails)
+	        questionDetails = this.questions[this.questionNumber-1]
+	        this.buildQuestions(questionDetails)
 	    }
 	}
 	ngOnInit() {

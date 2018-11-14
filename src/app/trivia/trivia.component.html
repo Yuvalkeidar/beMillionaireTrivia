@@ -1,5 +1,5 @@
 <div class="question">
-    <span class="question--number">Q:{{questionNumber}}</span><span class="question--text">{{questionDetails.question}}</span>
+    <span class="question--number">Q:{{questionNumber}}</span><span class="question--text">{{questionText}}</span>
 </div>
 <ul class="answerSection">
     <li *ngFor="let answer of answers; let i = index" class="row--{{i > 1 ? 2 : 1}} answer--{{i}}">
