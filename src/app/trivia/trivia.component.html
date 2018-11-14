@@ -1,0 +1,20 @@
+<div class="question">
+    <span class="question--number">Q:{{questionNumber}}</span><span class="question--text">{{questionDetails.question}}</span>
+</div>
+<ul class="answerSection">
+    <li *ngFor="let answer of answers; let i = index" class="row--{{i > 1 ? 2 : 1}} answer--{{i}}">
+        <input type="radio" id="q{{i}}" [attr.data-index]="i" name="trivia" (change)="triviaValueChanged($event)" [disabled]="answerChecked"/>
+        <label for="q{{i}}" [ngClass]="{
+			  'successAnswer': selectedAnswerIndex==i&&answerChecked&&selectedAnswerIndex==correctAnswerIndex,
+			  'wrongAnswer': selectedAnswerIndex==i&&answerChecked&&selectedAnswerIndex!=correctAnswerIndex
+			}"> 
+            <img class="answerType" *ngIf="correctAnswerIndex===i&&selectedAnswerIndex==i&&answerChecked" src="../../assets/Success.png">
+            <img class="answerType" *ngIf="correctAnswerIndex!==i&&selectedAnswerIndex==i&&answerChecked" src="../../assets/Wrong.png">
+            {{answer}}
+        </label>
+    </li>
+</ul>
+<a class="btn" (click)="!answerChecked && checkAnswer()" [ngClass]="{'answerSelected':selectedAnswerIndex!=-1,'isDisabled':answerChecked}"><div class="btn--text">OK</div></a>
+<div class="qustionProcessSection">
+    <span *ngFor="let question of questions; let i = index;" class="qustionProcess" [class.qustionProcess-filled]="i<questionNumber">&nbsp;</span>
+</div>

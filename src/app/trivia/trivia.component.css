@@ -1,0 +1,155 @@
+.question{
+    display: block;
+    margin-top: 7.6vh;
+    text-align: center;
+    margin-bottom: 5.9vh;
+}
+.question--number{
+    font-family: OpenSans-Bold;
+    font-size: 32px;
+    color: #0D7BAB;
+    letter-spacing: 0;
+    width:3.7%;
+    height: 4.5vh;
+    margin-right: 1%;
+}
+.question--text{
+    font-family: OpenSans;
+    font-size: 24px;
+    color: #223336;
+    letter-spacing: 0;
+    height:3.4vh;
+    width:28.8%;
+
+}
+.answerSection {
+     list-style-type:none;
+     padding:0;
+     display: block;
+}
+
+.answerSection li {
+    width:39.6%;
+    height: 17.1vh;
+}
+
+.answerSection input[type="radio"] {
+    display: none;
+}
+
+.answerSection input[type="radio"]:checked + label{
+    background: #FAFAFA;
+    border: 4px solid #0D7BAB;
+    border-radius: 23px;
+}
+.successAnswer{
+    background: #FAFAFA !important;
+    border: 4px solid #33C933 !important;
+    border-radius: 23px !important;
+}
+.wrongAnswer{
+    background: #FAFAFA !important;
+    border: 4px solid #FB4343 !important;
+    border-radius: 23px !important;
+}
+.answerSection label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    font-family: OpenSans-Semibold;
+    font-size: 28px;
+    color: #496472;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 4.1vh 9% 4vh 9%;
+    width:100%;
+    height: 100%;
+    border: 2px solid #D9E6EB;
+    border-radius: 23px;
+    background-color: #FAFAFA;
+}
+
+.answerSection label .answerType{
+    top: 4.9vh ;
+    left: 2.6vw;
+    width: 4.9vw;
+    height: 7.3vh;
+    position: absolute;
+    display: block;
+}
+
+.answerSection label:hover {
+     box-shadow: 0px 0px 10px 0px #dedede;
+}
+.row--1{
+    margin-bottom: 3.1vh;
+    display: inline-block;
+}
+.row--2{
+    margin-bottom: 4.9vh;
+    display: inline-block;
+}
+.answer--0,
+.answer--2{
+    margin-right: 2.1%;
+    margin-left: 9.4%;
+}
+.answerSelected{
+    background: #FF8F48 !important;
+}
+.btn{
+    width: 26%;
+    height: 7.2vh;
+    margin: 0 36.6% 5.9vh 36.6%;
+    background: #F0F0F0;
+    border-radius: 100px;
+    cursor: pointer;
+    display: block;
+}
+.btn:hover,
+.btn:active{
+    background: #F68034;
+}
+.btn--text{
+    font-family: OpenSans-Semibold;
+    font-size: 30px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 1.5vh 11.6%;
+}
+.isDisabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
+.qustionProcessSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    margin: 0 auto;
+    margin-bottom: 3.6vh;
+    font-size: 0;
+}   
+.qustionProcess{
+    height: 1.6vh;
+    width: 1%;
+    margin-right: 1.5%;
+    background: #C9CFD3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.qustionProcess:last-child{
+    margin-right:0%;
+}
+
+.qustionProcess-filled{
+    background: #0D7BAB !important;
+}

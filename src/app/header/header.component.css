@@ -1,0 +1,22 @@
+.flip-v{
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv; /*IE*/
+}
+.zoominfoTextContainer{
+    width:60.3%;
+    height: 10.8vh;
+    margin: 0px 19.9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zoominfoText{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
